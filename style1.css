@@ -1,0 +1,90 @@
+/* Default Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: background 0.5s ease-in-out;
+    background: #FFD700; /* Default: Happy */
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.mood-options {
+    margin: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+input[type="radio"]:checked + label {
+    background: black;
+    color: white;
+}
+
+/* Mood-Based Backgrounds */
+#happy:checked ~ body {
+    background: #FFD700;
+}
+
+#calm:checked ~ body {
+    background: #87CEEB;
+}
+
+#energetic:checked ~ body {
+    background: #FF4500;
+}
+
+#sad:checked ~ body {
+    background: #708090;
+}
+
+/* Mood-Based Color Palettes */
+.palette {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+
+/* Happy Palette */
+#happy:checked ~ .palette .color-box:nth-child(1) { background: #FFD700; }
+#happy:checked ~ .palette .color-box:nth-child(2) { background: #FFA500; }
+#happy:checked ~ .palette .color-box:nth-child(3) { background: #FFEC8B; }
+#happy:checked ~ .palette .color-box:nth-child(4) { background: #FFDAB9; }
+
+/* Calm Palette */
+#calm:checked ~ .palette .color-box:nth-child(1) { background: #87CEEB; }
+#calm:checked ~ .palette .color-box:nth-child(2) { background: #4682B4; }
+#calm:checked ~ .palette .color-box:nth-child(3) { background: #B0C4DE; }
+#calm:checked ~ .palette .color-box:nth-child(4) { background: #5F9EA0; }
+
+/* Energetic Palette */
+#energetic:checked ~ .palette .color-box:nth-child(1) { background: #FF4500; }
+#energetic:checked ~ .palette .color-box:nth-child(2) { background: #DC143C; }
+#energetic:checked ~ .palette .color-box:nth-child(3) { background: #FFD700; }
+#energetic:checked ~ .palette .color-box:nth-child(4) { background: #FF6347; }
+
+/* Sad Palette */
+#sad:checked ~ .palette .color-box:nth-child(1) { background: #708090; }
+#sad:checked ~ .palette .color-box:nth-child(2) { background: #2F4F4F; }
+#sad:checked ~ .palette .color-box:nth-child(3) { background: #778899; }
+#sad:checked ~ .palette .color-box:nth-child(4) { background: #A9A9A9; }
